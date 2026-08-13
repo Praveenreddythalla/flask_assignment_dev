@@ -2,38 +2,48 @@
 
 ## Project Description
 
-This project is a simple Flask web application that provides a basic voting system. Users can vote for candidates, view the current vote counts, check the application health, and reset all stored votes. Voting information is stored temporarily in memory while the application is running.
+This project is a simple Flask web application that provides a basic voting system.
+
+Users can:
+
+* View the application welcome page
+* Check the application health status
+* Vote for candidates
+* View the current vote counts
+* Reset all stored votes
+
+Voting information is stored temporarily in memory while the application is running.
 
 ## Installation and Setup
 
-### 1. Clone the repository
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/Praveenreddythalla/flask_assignment_dev.git
 cd flask_assignment_dev
 ```
 
-### 2. Create a virtual environment
+### 2. Create a Virtual Environment
 
 ```bash
 python -m venv venv
 ```
 
-### 3. Activate the virtual environment
+### 3. Activate the Virtual Environment
 
-PowerShell:
+For PowerShell:
 
 ```powershell
 .\venv\Scripts\Activate.ps1
 ```
 
-### 4. Install dependencies
+### 4. Install Dependencies
 
 ```bash
 pip install flask
 ```
 
-### 5. Run the application
+### 5. Run the Application
 
 ```bash
 python app.py
@@ -62,7 +72,7 @@ This project uses two Git branches:
 * `dev` — Used for development work.
 * `main` — Contains the stable version of the application.
 
-Workflow:
+### Workflow
 
 ```text
         Development
@@ -95,42 +105,42 @@ No application development was performed directly on `main`.
 
 ### 1. Application Running
 
-Welcome and health check.
+The application welcome page is displayed when accessing the root endpoint.
 
-### 2. Voting App
+![Welcome Screenshot](./Screenshots/Welcome.png.png)
 
-Vote, results, and reset functionality.
+### 2. Health Status
 
-### 3. Git History
+The health endpoint confirms that the application is running successfully.
 
-To verify the evolution from Version 1 to Version 2:
+![Health Status](./Screenshots/health.png.png)
+
+### 3. Vote Recorded
+
+A vote is recorded for the selected candidate using the voting endpoint.
+
+![Vote Recorded](./Screenshots/votingapp.png.png)
+
+### 4. Vote Results
+
+The results endpoint displays the current vote count for the candidates.
+
+![Vote Results](./Screenshots/votingresults.png.png)
+
+### 5. Reset
+
+The reset endpoint clears all stored vote counts.
+
+![Reset](./Screenshots/votingreset.png.png)
+
+## Git Commit History
+
+The following command can be used to verify the evolution of the project from Version 1 to Version 2:
 
 ```bash
 git log --oneline --graph --decorate main dev
 ```
 
-Screenshots are stored in the `Screenshots/` folder.
+The Git history demonstrates the development progression from Version 1 to Version 2 using the `dev` and `main` branches.
 
-### Welcome Screenshot
-
-![Welcome Screenshot](Screenshots/WelcomePage.png)
-
-### Health Status
-
-![Health Status](Screenshots/HealthStatus.png)
-
-### Vote Recorded
-
-![Vote Recorded](Screenshots/BhargaviVote.png)
-
-### Vote Results
-
-![Vote Results](Screenshots/ResultVote.png)
-
-### Reset
-
-![Reset](Screenshots/ResetVote.png)
-
-### Git Commit History
-
-![Git Commit History](Screenshots/CommitHistory.png)
+All screenshots are stored in the `Screenshots/` folder.
