@@ -4,13 +4,13 @@
 
 This project is a simple Flask web application that provides a basic voting system.
 
-Users can:
+* Votes are pre-populated from a static voter list defined in the code (voter_list).
 
-* View the application welcome page
-* Check the application health status
-* Vote for candidates
-* View the current vote counts
-* Reset all stored votes
+* Each name in the list represents a vote, and duplicates increase the count for that candidate.
+
+* Users can view the application status, check results, and reset votes.
+
+⚠️ Note: There is no live voting endpoint — votes are counted only from the predefined list.
 
 Voting information is stored temporarily in memory while the application is running.
 
@@ -65,6 +65,18 @@ http://localhost:5000
 | `/results`     | GET    | Returns the current vote count for all candidates |
 | `/reset`       | GET    | Clears all stored vote counts                     |
 
+## Voter List
+Votes are automatically counted from the following predefined list in app.py:
+
+voter_list = [
+    "Praveen", "Ravi", "Suresh", "Naresh", "Kiran", "Vamsi",  # unique
+    "Praveen", "Ravi", "Praveen", "Kiran"
+]
+
+Each occurrence of a name adds one vote.
+
+Example: "Praveen" appears 3 times → 3 votes.
+
 ## Git Workflow
 
 This project uses two Git branches:
@@ -99,7 +111,7 @@ No application development was performed directly on `main`.
 | Version   | Features                                           |
 | --------- | -------------------------------------------------- |
 | Version 1 | Flask application with `/` and `/health` endpoints |
-| Version 2 | Added `/vote/<name>`, `/results`, and `/reset`     |
+| Version 2 | Added `/results`, and `/reset`; votes auto-counted from a predefined list |
 
 ## Screenshots
 
@@ -138,9 +150,25 @@ The reset endpoint clears all stored vote counts.
 The following command can be used to verify the evolution of the project from Version 1 to Version 2:
 
 ```bash
-git log --oneline --graph --decorate main dev
+git log --oneline --graph --decorate --all --no-merges
 ```
 
-The Git history demonstrates the development progression from Version 1 to Version 2 using the `dev` and `main` branches.
+Screenshots are stored in the Screenshots/ folder showing commit and merge history.
 
-All screenshots are stored in the `Screenshots/` folder.
+### Version 1
+- Commit: e64efc2
+- Features: Initial Flask app with `/` and `/health` endpoints.
+
+![Version 1 Commit Screenshot](Screenshots/git_version1.png)
+
+### Version 2
+- Commits: c228910
+- Features: Added `/vote/<name>`, `/results`, `/reset` endpoints and updated README.
+
+![Version 2 Commit Screenshot](Screenshots/git_version2.png)
+
+* #### GIT Repositories
+![GIT Repos](Screenshots/GitRepoBranch.png)
+
+* #### GIT Commit History
+![GIT Commit History](Screenshots/GITCommitHistory.png)
