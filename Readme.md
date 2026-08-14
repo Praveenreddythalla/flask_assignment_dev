@@ -168,7 +168,7 @@ Screenshots are stored in the Screenshots/ folder showing commit and merge histo
 ![Version 2 Commit Screenshot](Screenshots/git_version2.png)
 
 * #### GIT Repositories
-![GIT Repos](Screenshots/GitRepoBranch.png)
+![GIT Repos](Screenshots/GITRepoBranch.png)
 
 * #### GIT Commit History
-![GIT Commit History](Screenshots/GITCommitHistory.png)
+![GIT Commit History](Screenshots/GitCommitHistory.png)
